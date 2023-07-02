@@ -1,0 +1,76 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+
+    "importSorter": {
+        "generalConfiguration": {
+            "sortOnBeforeSave": true
+        },
+        "importStringConfiguration": {
+            "hasSemicolon": true,
+            "quoteMark": "double",
+            "tabSize": 4,
+            "maximumNumberOfImportExpressionsPerLine": {
+                "count": 180
+            },
+            "spacingPerImportExpression": {
+                "afterStartingBracket": 1,
+                "beforeEndingBracket": 1
+            }
+        },
+        "sortConfiguration": {
+            "customOrderingRules": {
+                "rules": [
+                    {
+                        // global style should have most top
+                        "regex": "assets/styles/.*.(sc|sa|c)?ss$",
+                        "orderLevel": 10
+                    },
+                    {
+                        "regex": "^(@webfac)",
+                        "orderLevel": 25
+                    },
+                    {
+                        "regex": "^(components|libs|store|utils|mock-data|api|animations)",
+                        "orderLevel": 30
+                    },
+
+                    {
+                        "regex": "^(assets|@images|@assets)",
+                        "orderLevel": 31
+                    },
+                    {
+                        "regex": "^\\..*.(sc|sa|c)?ss$",
+                        "orderLevel": 41
+                    },
+                    {
+                        "regex": "^\\.",
+                        "orderLevel": 40
+                    },
+                    {
+                        "regex": "^[@]",
+                        "orderLevel": 15
+                    },
+                    {
+                        "type": "importMember",
+                        "regex": "^$",
+                        "orderLevel": 50
+                        // "disableSort": true
+                    }
+                ]
+            }
+        }
+    },
+
+    "blueprint.templatesPath": ["./.vscode/blueprint-templates"],
+
+    "terminal.integrated.profiles.windows": {
+        "JavaScript Debug Terminal": null,
+        "Bash": {
+            "path": "G:\\Devtools\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        }
+    },
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Bash"
+}
